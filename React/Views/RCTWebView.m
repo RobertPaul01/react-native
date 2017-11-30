@@ -144,6 +144,13 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
 {
   [super layoutSubviews];
   _webView.frame = self.bounds;
+
+  // Used to disable zoom
+  _webView.scrollView.scrollEnabled = NO;
+  _webView.scrollView.multipleTouchEnabled = NO;
+  _webView.scrollView.maximumZoomScale = 1.0;
+  _webView.scrollView.minimumZoomScale = 1.0;
+  _webView.scrollView.pinchGestureRecognizer.enabled = NO;
 }
 
 - (void)setContentInset:(UIEdgeInsets)contentInset
