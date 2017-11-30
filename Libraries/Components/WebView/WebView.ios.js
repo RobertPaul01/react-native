@@ -226,6 +226,11 @@ class WebView extends React.Component {
      * @platform ios
      */
     decelerationRate: ScrollView.propTypes.decelerationRate,
+
+    // TODO: Comment
+    minimumZoomScale: ScrollView.propTypes.minimumZoomScale,
+    maximumZoomScale: ScrollView.propTypes.maximumZoomScale,
+
     /**
      * Boolean value that determines whether scrolling is enabled in the
      * `WebView`. The default value is `true`.
@@ -478,6 +483,8 @@ class WebView extends React.Component {
         bounces={this.props.bounces}
         scrollEnabled={this.props.scrollEnabled}
         decelerationRate={decelerationRate}
+        minimumZoomScale={this.props.minimumZoomScale}
+        maximumZoomScale={this.props.maximumZoomScale}
         contentInset={this.props.contentInset}
         automaticallyAdjustContentInsets={this.props.automaticallyAdjustContentInsets}
         onLoadingStart={this._onLoadingStart}
